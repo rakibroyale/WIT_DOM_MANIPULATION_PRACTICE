@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Test</title>
+  </head>
+  <body>
+    <div id="header">Welcome to JS DOM Test!!</div>
+    <div id="content">
+      <div class="list" id="books">
+        <h3>List of books</h3>
+        <ul>
+          <li>book name 1</li>
+          <li>book name 2</li>
+          <li>book name 3</li>
+          <li>book name 4</li>
+          <li>book name 5</li>
+        </ul>
+      </div>
+      <div class="list" id="fruits">
+        <h3>List of fruits</h3>
+        <ul>
+          <li>fruit name 1</li>
+          <li>fruit name 2</li>
+          <li>fruit name 3</li>
+          <li>fruit name 4</li>
+          <li>fruit name 5</li>
+          <li>fruit name 6</li>
+          <li>fruit name 7</li>
+        </ul>
+      </div>
+      <div class="list" id="places">
+        <h3>List of places</h3>
+        <ul>
+          <li>Place name 1</li>
+          <li>Place name 2</li>
+          <li>Place name 3</li>
+          <li>Place name 4</li>
+        </ul>
+      </div>
+      <div class="list" id="movies">
+        <h3>List of movies</h3>
+        <ul>
+          <li>Movie name 1</li>
+          <li>Movie name 2</li>
+          <li>Movie name 3</li>
+          <li>Movie name 4</li>
+        </ul>
+      </div>
+      <div class="list" id="sports">
+        <h3>List of sports</h3>
+        <ul>
+          <li>sport name 1</li>
+          <li>sport name 2</li>
+          <li>sport name 3</li>
+          <li>sport name 4</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="footer">
+      Name: MD Badruddoza Rakib<br />
+      ID: 14
+    </div>
+
+    <script>
+      document.body.style.backgroundColor = "#f4c894";
+
+      const header = document.getElementById("header");
+      header.style.backgroundColor = "#a12727";
+      header.style.color = "white";
+      header.style.padding = "10px";
+      header.style.textAlign = "center";
+      header.style.fontSize = "2em";
+      header.style.marginBottom = "20px";
+
+      const content = document.getElementById("content");
+      content.style.display = "flex";
+      content.style.flexWrap = "wrap";
+      content.style.justifyContent = "center";
+      content.style.gap = "20px";
+
+      const lists = document.getElementsByClassName("list");
+      for (let i = 0; i < lists.length; i++) {
+        lists[i].style.border = "2px solid black";
+        lists[i].style.padding = "15px";
+        lists[i].style.backgroundColor = "#f7f7f7";
+        lists[i].style.width = "200px";
+        lists[i].style.boxSizing = "border-box";
+        lists[i].style.textAlign = "center";
+        lists[i].style.borderRadius = "10px";
+      }
+
+      document.querySelectorAll("#books ul li")[0].style.color = "turquoise";
+      document.querySelectorAll("#books ul li")[2].style.color = "royalblue";
+      document.querySelectorAll("#fruits ul li")[3].style.color = "royalblue";
+      document.querySelectorAll("#fruits ul li")[6].style.color = "magenta";
+      document.querySelectorAll("#places ul li")[1].style.color = "royalblue";
+      document.querySelectorAll("#movies ul li")[2].style.color = "gold";
+      document.querySelectorAll("#sports ul li")[0].style.color = "royalblue";
+      document.querySelectorAll("#sports ul li")[1].style.color = "royalblue";
+
+      console.log("Books:", document.getElementById("books").innerText);
+      console.log("Fruits:", document.getElementById("fruits").innerText);
+      console.log("Places:", document.getElementById("places").innerText);
+      console.log("Movies:", document.getElementById("movies").innerText);
+      console.log("Sports:", document.getElementById("sports").innerText);
+
+      document.getElementById("books").querySelector("h3").style.color =
+        "turquoise";
+      document.getElementById("fruits").querySelector("h3").style.color =
+        "limegreen";
+      document.getElementById("places").querySelector("h3").style.color =
+        "royalblue";
+      document.getElementById("movies").querySelector("h3").style.color =
+        "magenta";
+      document.getElementById("sports").querySelector("h3").style.color = "red";
+
+      const footer = document.getElementById("footer");
+      footer.style.backgroundColor = "#f7f7f7";
+      footer.style.color = "#3b6b43";
+      footer.style.padding = "10px";
+      footer.style.textAlign = "center";
+      footer.style.marginTop = "20px";
+      footer.style.fontSize = "1.2em";
+      footer.style.border = "2px solid black";
+      footer.style.borderRadius = "10px";
+      footer.style.boxSizing = "border-box";
+      footer.style.width = "300px";
+      footer.style.margin = "20px auto";
+      footer.style.fontWeight = "bold";
+      console.log(
+        "Footer element:",
+        document.getElementById("footer").innerText
+      );
+    </script>
+  </body>
+</html>
